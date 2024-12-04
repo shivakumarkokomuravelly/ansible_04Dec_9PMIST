@@ -1,0 +1,14 @@
+--- 
+- hosts: 172.31.31.102
+  become: yes 
+  tasks: 
+  - name: using loops to create 5 users 
+    user:
+     name: "{{item}}"
+     
+    loop:
+     - testuser1
+     - testuser2
+     - testuser3
+     - testuser4 
+     - testuser5 
