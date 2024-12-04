@@ -1,0 +1,13 @@
+--- 
+- hosts: all 
+  become: yes
+  vars:
+   a: htop 
+   b: present 
+   c: yes 
+  tasks:
+  - name: installing htop using play scope variables 
+    apt: 
+     name: "{{a}}"
+     state: "{{b}}"
+     update_cache: "{{c}}"
