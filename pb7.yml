@@ -1,0 +1,14 @@
+---
+- hosts: 172.31.31.102 
+  become: yes
+  tasks:
+   - name: installing and uninstalling softwares
+     apt:
+      name: "{{item.a}}"
+      state: "{{item.b}}"
+      update_cache: "{{item.c}}"
+     with_items:
+      - {a: tree,b: absent,c: yes}
+      - {a: htop,b: present,c: yes}
+      - {a: apache2,b: absent,c: yes}
+...
