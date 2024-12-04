@@ -1,0 +1,12 @@
+--- 
+- hosts: 172.31.31.102 
+  become: yes 
+  vars:
+   a: 10
+  tasks:
+  - name: testing when condition 
+    apt: 
+     name: openjdk-17-jdk
+     state: present 
+     update_cache: yes 
+    when: a==10  
