@@ -1,0 +1,11 @@
+---
+- name: Configuring apache2
+  hosts: 192.168.60.22
+  tasks:
+   - include: "{{item}}"
+     with_items:
+      - pb10.yml
+      - pb11.yml
+      - pb12.yml
+      
+...
