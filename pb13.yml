@@ -1,7 +1,8 @@
 ---
-- name: Configuring apache2
-  hosts: 192.168.60.22
-  tasks:
+
+  - hosts: 172.31.31.102
+    become: yes
+    tasks:
    - include: "{{item}}"
      with_items:
       - pb10.yml
