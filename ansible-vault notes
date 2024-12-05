@@ -1,0 +1,18 @@
+1)ansible-vault encrypt pb19.yml
+
+to edit encrypted playbooks
+
+2)ansible-vault edit pb19.yml
+
+to decrypt encrypted playbooks
+
+3)ansible-vault decrypt pb19.yml
+
+to change the password of an existing playbook
+ 
+4)ansible-vault rekey pb19.yml
+
+5)to created an encrypted playbook
+
+  ansible-vault create pb20.yml
+
