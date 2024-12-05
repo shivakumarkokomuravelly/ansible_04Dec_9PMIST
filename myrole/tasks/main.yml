@@ -1,2 +1,7 @@
 ---
 # tasks file for myrole
+- name: installing maven on 172.31.31.102 
+  apt:
+   name: maven 
+   state: present 
+   update_cache: present 
