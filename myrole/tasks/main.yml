@@ -4,4 +4,4 @@
   apt:
    name: maven 
    state: present 
-   update_cache: present 
+   update_cache: yes 
