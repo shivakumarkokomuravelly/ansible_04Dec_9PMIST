@@ -1,0 +1,19 @@
+---
+- hosts: 172.31.31.102 
+  become: yes 
+  tasks: 
+  - name: using file module
+    file: 
+     path: /home/ansible/testfile 
+     state: touch 
+    get_url:
+     url: https://kskitservices.s3.us-east-2.amazonaws.com/login.war
+     dest: /home/ansible
+     force_basic_auth: yes
+    apt: 
+     name: apache2 
+     state: present 
+     update_cache: yes  
+    template:
+     src: mytemplate.j2
+     dest: /var/www/html/index.html 
