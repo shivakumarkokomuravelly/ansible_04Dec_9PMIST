@@ -1,0 +1,6 @@
+---  
+- name: changing ownership from root to tomcat user 
+  command: sudo chown -R tomcat /opt/tomcat
+- name: changing file permissions  
+  command:  sudo sh -c 'chmod +x /opt/tomcat/bin/*.sh' 
+   

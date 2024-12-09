@@ -1,0 +1,16 @@
+--- 
+- name: downloading tomcat  
+  get_url: 
+   url: https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.33/bin/apache-tomcat-10.1.33.tar.gz
+   dest: /home/ansible 
+   force_basic_auth: yes
+- name: create a directory 
+  file:
+   path: /opt/tomcat 
+   state: directory 
+- unarchive:
+   src: /home/ansible/apache-tomcat-10.1.33.tar.gz
+   dest: /opt/tomcat
+   remote_src: yes
+
+      
