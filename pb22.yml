@@ -1,3 +1,4 @@
 - hosts: 172.31.31.102 
+  become: yes
   roles:
     - role: "myrole"

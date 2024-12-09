@@ -6,14 +6,17 @@
     file: 
      path: /home/ansible/testfile 
      state: touch 
+  - name: downloading   
     get_url:
      url: https://kskitservices.s3.us-east-2.amazonaws.com/login.war
      dest: /home/ansible
      force_basic_auth: yes
+  - name: installing apache2     
     apt: 
      name: apache2 
      state: present 
      update_cache: yes  
+  - name: templates and dynamic content      
     template:
      src: mytemplate.j2
      dest: /var/www/html/index.html 
