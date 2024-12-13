@@ -2,5 +2,5 @@
 - name: downloading and deploying java app 
   get_url:
    url: https://kskitservices.s3.us-east-2.amazonaws.com/login.war
-   dest: /opt/tomcat/webapps 
+   dest: /opt/tomcat/apache-tomcat-10.1.33/webapps 
    force_basic_auth: yes

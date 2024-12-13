@@ -5,6 +5,6 @@
 - include_tasks: tomcatsetup.yml
 - include_tasks: groupuseradd.yml
 - include_tasks: changepermissions.yml
-- include_tasks: tempalteusage.yml
+- include_tasks: templateusage.yml
 - include_tasks: tomcatstart.yml
 - include_tasks: javaappdeploy.yml
